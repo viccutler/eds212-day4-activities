@@ -1,0 +1,34 @@
+---
+title: "r-exploring"
+author: "Victoria Cutler"
+date: "2022-08-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+Pairs Plot:
+```{r, eval = FALSE} 
+
+ggpairs(data = diamonds)
+
+```
+
+Scatterplot:
+```{r}
+ggplot(data = diamonds, mapping = aes(x = carat, y = price)) +
+  geom_point(size = .5)
+```
+
+Histogram:
+```{r}
+ggplot(data = diamonds, mapping = aes(x = carat)) +
+  geom_histogram()
+```
+
